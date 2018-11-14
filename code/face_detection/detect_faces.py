@@ -1,5 +1,5 @@
 # USAGE
-# python detect_faces.py --face cascades/haarcascade_frontalface_default.xml --image images/obama.png
+# python detect_faces.py --face cascades/haarcascade_frontalface_default.xml --image images/liwei_tiantian.png
 
 # import the necessary packages
 from __future__ import print_function

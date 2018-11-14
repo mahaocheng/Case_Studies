@@ -1,4 +1,5 @@
 # USAGE
+# cd C:\Users\lenovo\workspace\Case_Studies\code\webcam_face_detection
 # python cam.py --face cascades/haarcascade_frontalface_default.xml
 # python cam.py --face cascades/haarcascade_frontalface_default.xml --video video/adrian_face.mov
 
@@ -39,12 +40,12 @@ while True:
 		break
 
 	# resize the frame and convert it to grayscale
-	frame = imutils.resize(frame, width = 300)
+	frame = imutils.resize(frame, width = 600)
 	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
 	# detect faces in the image and then clone the frame
 	# so that we can draw on it
-	faceRects = fd.detect(gray, scaleFactor = 1.1, minNeighbors = 5,
+	faceRects = fd.detect(gray, scaleFactor = 1.2, minNeighbors = 5,
 		minSize = (30, 30))
 	frameClone = frame.copy()
 

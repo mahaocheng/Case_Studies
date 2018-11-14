@@ -9,6 +9,7 @@ import argparse
 import glob
 import csv
 import cv2
+import os
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
@@ -67,7 +68,7 @@ else:
 	# loop over the results
 	for (i, (score, coverPath)) in enumerate(results):
 		# grab the book information
-		(author, title) = db[coverPath[coverPath.rfind("/") + 1:]]
+		(author, title) = db[coverPath[coverPath.rfind(os.sep) + 1:]]
 		print("{}. {:.2f}% : {} - {}".format(i + 1, score * 100,
 			author, title))
 
